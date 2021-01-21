@@ -1,9 +1,16 @@
 #include <iostream>
+#include <random>
+#include <ctime>
+#include <cstdlib>
 #include <string.h>
-#include <time.h>
 using namespace std;
 
 int typing();
+
+int test1();
+int test2();
+
+char word[256];
 
 int main()
 {
@@ -23,68 +30,78 @@ int main()
 
 int typing()
 {
-	system("cls");
 	srand(time(NULL));
+
 	int i;
-	int ii = rand() % 6;
-	char word[256];
-	for (i = 0; i <= 5; ++i) {
-		if (ii <= 1) {
-			cout << "Hello\n" << endl;
-			cin >> word;
-			if (!strcmp(word, "Hello")) {
-				cout << "Good!\n" << endl;
-			}
-			else {
-				cout << "Bad!\n" << endl;
-			}
+	int vi = rand() % 2 + 1;
+
+	for (int i = 0; i < 1; ++i) {
+		if (vi == 1) {
+			test1();
 		}
-		else if (ii <= 2) {
-			cout << "Fuck" << endl;
-			cin >> word;
-			if (!strcmp(word, "Fuck")) {
-				cout << "Good!\n" << endl;
-			}
-			else {
-				cout << "Bad!\n" << endl;
-			}
-		}
-		else if (ii <= 3) {
-			cout << "Exploit" << endl;
-			cin >> word;
-			if (!strcmp(word, "Exploit")) {
-				cout << "Good!\n" << endl;
-			}
-			else {
-				cout << "Bad!\n" << endl;
-			}
-		}
-		else if (ii <= 4) {
-			cout << "Hacker" << endl;
-			cin >> word;
-			if (!strcmp(word, "Hacker")) {
-				cout << "Good!\n" << endl;
-			}
-			else {
-				cout << "Bad!\n" << endl;
-			}
-		}
-		else if (ii <= 5) {
-			cout << "Metasploit" << endl;
-			cin >> word;
-			if (!strcmp(word, "Metasploit")) {
-				cout << "Good!\n" << endl;
-			}
-			else {
-				cout << "Bad!\n" << endl;
-			}
-		}
-		else {
-			exit(0);
+		else if (vi == 2) {
+			test2();
 		}
 	}
-	cout << "おしまい。" << endl;
 
-	system("pause");
+	return 0;
+}
+
+int test1()
+{
+	cout << "こんにちは" << endl;
+	cin >> word;
+	if (!strcmp(word, "こんにちは")) {
+		cout << "Good!" << endl;
+	}
+	else {
+		cout << "Bad!" << endl;
+	}
+	cout << "こんばんは" << endl;
+	cin >> word;
+	if (!strcmp(word, "こんばんは")) {
+		cout << "Good!" << endl;
+	}
+	else {
+		cout << "Bad!" << endl;
+	}
+	cout << "４ね" << endl;
+	cin >> word;
+	if (!strcmp(word, "４ね")) {
+		cout << "Gooodd!" << endl;
+	}
+	else {
+		cout << "Bad!! FUCK YOU!!!" << endl;
+	}
+
+	return 0;
+}
+
+int test2()
+{
+	cout << "hello" << endl;
+	cin >> word;
+	if (!strcmp(word, "hello")) {
+		cout << "Good!" << endl;
+	}
+	else {
+		cout << "Bad!" << endl;
+	}
+	cout << "Good evening." << endl;
+	cin >> word;
+	if (!strcmp(word, "exploit")) {
+		cout << "Good!" << endl;
+	}
+	else {
+		cout << "Bad!" << endl;
+	}
+	cout << "４ね" << endl;
+	cin >> word;
+	if (!strcmp(word, "４ね")) {
+		cout << "Gooodd!" << endl;
+	}
+	else  {
+		cout << "Bad!! FUCK YOU!!!" << endl;
+	}
 	return 0;
 }
