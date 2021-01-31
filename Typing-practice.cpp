@@ -123,34 +123,75 @@ int test1()
 				}
 			}
 		}
+		int exit;
+		exit = getchar();
 
 	return 0;
 }
 
 int test2()
 {
-	cout << "hello" << endl;
-	cin >> word;
-	if (!strcmp(word, "hello")) {
-		cout << "Good!" << endl;
+	int i;
+	int id = rand() % 2 + 1;
+	for (i = 0;i < 1;++i) {
+		if (id == 1) {
+			cout << "hello" << endl;
+			cin >> word;
+			if (!strcmp(word, "hello")) {
+				cout << "Good!" << endl;
+			}
+			else {
+				cout << "Bad!" << endl;
+			}
+		}
+		else if (id == 2) {
+			cout << "HELLO" << endl;
+			cin >> word;
+			if (!strcmp(word, "HELLO")) {
+				cout << "Good!" << endl;
+			}
+			else {
+				cout << "Bad!" << endl;
+			}
+		}
 	}
-	else {
-		cout << "Bad!" << endl;
+	int id1 = rand() % 2 + 1;
+	for (i = 0;i < 1;++i) {
+		if (id1 == 1) {
+			cout << "linux" << endl;
+			cin >> word;
+			if (!strcmp(word, "linux")) {
+				cout << "Good!" << endl;
+			}
+			else {
+				cout << "Bad!" << endl;
+			}
+		}
+		if (id1 == 2) {
+			cout << "ifconfig" << endl;
+			cin >> word;
+			if (!strcmp(word, "ifconfig")) {
+				cout << "Good!" << endl;
+			}
+			else {
+				cout << "Bad!" << endl;
+			}
+		}
 	}
-	cout << "Good evening." << endl;
-	cin >> word;
-	if (!strcmp(word, "exploit")) {
-		cout << "Good!" << endl;
+	int id2 = rand() % 2 + 1;
+	for (i = 0;i < 1;++i) {
+		if (id2 == 1) {
+			cout << "metasploit-framework" << endl;
+			cin >> word;
+			if (!strcmp(word, "matasploit-framework")) {
+				cout << "Good!" << endl;
+			}
+			else {
+				cout << "Bad!" << endl;
+			}
+		}
 	}
-	else {
-		cout << "Bad!" << endl;
-	}
-	cout << "４ね" << endl;
-	cin >> word;
-	if (!strcmp(word, "４ね")) {
-		cout << "Bad!" << endl;
-	} else {
-		cout << "BAD!" << endl;
-	}
+	int exit;
+	exit = getchar();
 	return 0;
 }
