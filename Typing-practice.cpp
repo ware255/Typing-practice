@@ -79,7 +79,7 @@ int test1()
 		}
 		int id1 = rand() % 2 + 1;
 		for (i = 0;i < 1;++i) {
-			if (id == 1) {
+			if (id1 == 1) {
 				cout << "さようなら" << endl;
 				cin >> word;
 				if (!strcmp(word, "さようなら")) {
@@ -89,7 +89,7 @@ int test1()
 					cout << "Bad!" << endl;
 				}
 			}
-			if (id == 2) {
+			if (id1 == 2) {
 				cout << "こんばんは" << endl;
 				cin >> word;
 				if (!strcmp(word, "こんばんは")) {
@@ -102,7 +102,7 @@ int test1()
 		}
 		int id2 = rand() % 2 + 1;
 		for (i = 0;i < 1;++i) {
-			if (id == 1) {
+			if (id2 == 1) {
 				cout << "おやすみ" << endl;
 				cin >> word;
 				if (!strcmp(word, "おやすみ")) {
@@ -112,7 +112,7 @@ int test1()
 					cout << "Bad!" << endl;
 				}
 			}
-			if (id == 2) {
+			if (id2 == 2) {
 				cout << "ねむたい" << endl;
 				cin >> word;
 				if (!strcmp(word, "ねむたい")) {
