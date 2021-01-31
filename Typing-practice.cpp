@@ -22,7 +22,8 @@ int main()
 	if (test == 'y' || test == 'Y') {
 		typing();
 	}
-	else {
+	else if (cin.fail()){
+		cin.ignore(1024, '\n');
 		exit(0);
 	}
 	return 0;
@@ -42,6 +43,9 @@ int typing()
 		else if (vi == 2) {
 			test2();
 		}
+		else {
+			exit(0);
+		}
 	}
 
 	return 0;
@@ -49,30 +53,76 @@ int typing()
 
 int test1()
 {
-	cout << "こんにちは" << endl;
-	cin >> word;
-	if (!strcmp(word, "こんにちは")) {
-		cout << "Good!" << endl;
-	}
-	else {
-		cout << "Bad!" << endl;
-	}
-	cout << "こんばんは" << endl;
-	cin >> word;
-	if (!strcmp(word, "こんばんは")) {
-		cout << "Good!" << endl;
-	}
-	else {
-		cout << "Bad!" << endl;
-	}
-	cout << "４ね" << endl;
-	cin >> word;
-	if (!strcmp(word, "４ね")) {
-		cout << "Gooodd!" << endl;
-	}
-	else {
-		cout << "Bad!! FUCK YOU!!!" << endl;
-	}
+	int i;
+	int id = rand() % 2 + 1;
+	for (i = 0;i < 1;++i) {
+		if (id == 1) {
+			cout << "おはよう" << endl;
+			cin >> word;
+				if (!strcmp(word, "おはよう")) {
+					cout << "Good!" << endl;
+				}
+				else {
+					cout << "Bad!" << endl;
+				}
+		if(id == 2) {
+				cout << "こんにちは" << endl;
+				cin >> word;
+					if (!strcmp(word, "こんにちは")) {
+						cout << "Good!" << endl;
+					}
+					else {
+						cout << "Bad!" << endl;
+					}
+				}
+			}
+		}
+		int id1 = rand() % 2 + 1;
+		for (i = 0;i < 1;++i) {
+			if (id == 1) {
+				cout << "さようなら" << endl;
+				cin >> word;
+				if (!strcmp(word, "さようなら")) {
+					cout << "Good!" << endl;
+				}
+				else {
+					cout << "Bad!" << endl;
+				}
+			}
+			if (id == 2) {
+				cout << "こんばんは" << endl;
+				cin >> word;
+				if (!strcmp(word, "こんばんは")) {
+					cout << "Good!" << endl;
+				}
+				else {
+					cout << "Bad!" << endl;
+				}
+			}
+		}
+		int id2 = rand() % 2 + 1;
+		for (i = 0;i < 1;++i) {
+			if (id == 1) {
+				cout << "おやすみ" << endl;
+				cin >> word;
+				if (!strcmp(word, "おやすみ")) {
+					cout << "Good!" << endl;
+				}
+				else {
+					cout << "Bad!" << endl;
+				}
+			}
+			if (id == 2) {
+				cout << "ねむたい" << endl;
+				cin >> word;
+				if (!strcmp(word, "ねむたい")) {
+					cout << "Good!" << endl;
+				}
+				else {
+					cout << "Bad!" << endl;
+				}
+			}
+		}
 
 	return 0;
 }
@@ -98,10 +148,9 @@ int test2()
 	cout << "４ね" << endl;
 	cin >> word;
 	if (!strcmp(word, "４ね")) {
-		cout << "Gooodd!" << endl;
-	}
-	else  {
-		cout << "Bad!! FUCK YOU!!!" << endl;
+		cout << "Bad!" << endl;
+	} else {
+		cout << "BAD!" << endl;
 	}
 	return 0;
 }
