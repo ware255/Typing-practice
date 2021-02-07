@@ -3,7 +3,6 @@
 #include <random>
 #include <ctime>
 #include <cstdlib>
-#include <string.h>
 using namespace std;
 
 int typing();
@@ -142,17 +141,19 @@ int test1()
 				if (word == v6) {
 					cout << "Good!" << endl;
 					int exit;
-					exit = getchar();
+					exit = cin.get();
+					cin.ignore(1024, '\n');
 					break;
 				}
 				else {
 					cout << "Bad!" << endl;
 					int exit1;
-					exit1 = getchar();
+					exit1 = cin.get();
+					cin.ignore(1024, '\n');
 				}
 			}
-			}
 		}
+	}
 	return 0;
 }
 
@@ -209,6 +210,7 @@ int test2()
 			cin >> word;
 			if (word == a4) {
 				cout << "Good!" << endl;
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
@@ -225,12 +227,16 @@ int test2()
 			if (word == a5) {
 				cout << "Good!" << endl;
 				int exit;
-				exit = getchar();
+				exit = cin.get();
+				cin.ignore(1024, '\n');
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
 				int exit1;
-				exit1 = getchar();
+				exit1 = cin.get();
+				cin.ignore(1024, '\n');
+				break;
 			}
 		}
 	}
