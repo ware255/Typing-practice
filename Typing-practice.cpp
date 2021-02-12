@@ -23,6 +23,7 @@ int main()
 		typing();
 	}
 	else if (cin.bad()){
+		cin.clear();
 		cin.ignore(1024, '\n');
 		exit(0);
 	}
@@ -31,7 +32,7 @@ int main()
 
 int typing()
 {
-	srand(time(NULL));
+	srand(time_t(NULL));
 
 	int i;
 	int vi = rand() % 2 + 1;
