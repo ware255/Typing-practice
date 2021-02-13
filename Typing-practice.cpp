@@ -69,26 +69,30 @@ int test1()
 	for (i = 0;i < 1;++i) {
 		if (id == 1) {
 			for (q = 0;q < 3;q++) {
-			cout << "おはよう" << endl;
-			cin >> setw(256) >> word;
-				if (word == v1) {
-					cout << "Good!" << endl;
-					break;
+				cout << "おはよう" << endl;
+				cin >> setw(256) >> word;
+					if (word == v1) {
+						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
+						break;
+					}
+					else {
+						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
+					}
 				}
-				else {
-					cout << "Bad!" << endl;
-				}
-			}
 		if(id == 2) {
 			for (q = 0;q < 3;q++) {
 				cout << "こんにちは" << endl;
 				cin >> setw(256) >> word;
 					if (word == v2) {
 						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
 					}
 				}
 				}
@@ -97,65 +101,69 @@ int test1()
 		for (i = 0;i < 1;++i) {
 			if (id1 == 1) {
 				for (q = 0;q < 3;q++) {
-				cout << "さようなら" << endl;
-				cin >> setw(256) >> word;
-				if (word == v3) {
-					cout << "Good!" << endl;
-					break;
-				}
-				else {
-					cout << "Bad!" << endl;
+					cout << "さようなら" << endl;
+					cin >> setw(256) >> word;
+					if (word == v3) {
+						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
+						break;
+					}
+					else {
+						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
+					}
 				}
 			}
-		}
 			if (id1 == 2) {
 				for (q = 0;q < 3;q++) {
-				cout << "こんばんは" << endl;
-				cin >> setw(256) >> word;
-				if (word == v4) {
-					cout << "Good!" << endl;
-					break;
+					cout << "こんばんは" << endl;
+					cin >> setw(256) >> word;
+					if (word == v4) {
+						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
+						break;
+					}
+					else {
+						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
+					}
 				}
-				else {
-					cout << "Bad!" << endl;
-				}
-			}
 			}
 		}
 		for (i = 0;i < 1;++i) {
 			if (id2 == 1) {
 				for (q = 0;q < 3;q++) {
-				cout << "おやすみ" << endl;
-				cin >> setw(256) >> word;
-				if (word == v5) {
-					cout << "Good!" << endl;
-					break;
+					cout << "おやすみ" << endl;
+					cin >> setw(256) >> word;
+					if (word == v5) {
+						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
+						break;
+					}
+					else {
+						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
+					}
 				}
-				else {
-					cout << "Bad!" << endl;
-				}
-			}
 			}
 			if (id2 == 2) {
 				for (q = 0;q < 3;q++) {
-				cout << "ねむたい" << endl;
-				cin >> setw(256) >> word;
-				if (word == v6) {
-					cout << "Good!" << endl;
-					int exit;
-					exit = cin.get();
-					cin.ignore(1024, '\n');
-					break;
-				}
-				else {
-					cout << "Bad!" << endl;
-					int exit1;
-					exit1 = cin.get();
-					cin.ignore(1024, '\n');
+					cout << "ねむたい" << endl;
+					cin >> setw(256) >> word;
+					if (word == v6) {
+						cout << "Good!" << endl;
+						cin.ignore(1024, '\n');
+						cin.get();
+						break;
+					}
+					else {
+						cout << "Bad!" << endl;
+						cin.ignore(1024, '\n');
+						cin.get();
+					}
 				}
 			}
 		}
-	}
 	return 0;
 }
 
@@ -175,9 +183,12 @@ int test2()
 			cin >> setw(256) >> word;
 			if (word == a1) {
 				cout << "Good!" << endl;
+				cin.ignore(1024, '\n');
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
+				cin.ignore(1024, '\n');
 			}
 		}
 		else if (id == 2) {
@@ -185,63 +196,68 @@ int test2()
 			cin >> setw(256) >> word;
 			if (word == a2) {
 				cout << "Good!" << endl;
+				cin.ignore(1024, '\n');
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
+				cin.ignore(1024, '\n');
 			}
 		}
 	}
 	int id1 = rand() % 2 + 1;
 	for (i = 0;i < 1;++i) {
 		for (q = 0;q < 3;q++) {
-		if (id1 == 1) {
-			cout << "linux" << endl;
-			cin >> setw(256) >> word;
-			if (word == a3) {
-				cout << "Good!" << endl;
-				break;
+			if (id1 == 1) {
+				cout << "linux" << endl;
+				cin >> setw(256) >> word;
+				if (word == a3) {
+					cout << "Good!" << endl;
+					cin.ignore(1024, '\n');
+					break;
+				}
+				else {
+					cout << "Bad!" << endl;
+					cin.ignore(1024, '\n');
+				}
 			}
-			else {
-				cout << "Bad!" << endl;
-			}
-		}
 		}
 		if (id1 == 2) {
 			for (q = 0;q < 3;q++) {
-			cout << "ifconfig" << endl;
-			cin >> setw(256) >> word;
-			if (word == a4) {
-				cout << "Good!" << endl;
-				break;
-			}
-			else {
-				cout << "Bad!" << endl;
+				cout << "ifconfig" << endl;
+				cin >> setw(256) >> word;
+				if (word == a4) {
+					cout << "Good!" << endl;
+					cin.ignore(1024, '\n');
+					break;
+				}
+				else {
+					cout << "Bad!" << endl;
+					cin.ignore(1024, '\n');
+				}
 			}
 		}
 	}
-}
 	int id2 = rand() % 2 + 1;
 	for (i = 0;i < 1;++i) {
 		if (id2 == 1) {
 			for (q = 0;q < 3;q++) {
-			cout << "metasploit-framework" << endl;
-			cin >> setw(256) >> word;
-			if (word == a5) {
-				cout << "Good!" << endl;
-				int exit;
-				exit = cin.get();
-				cin.ignore(1024, '\n');
-				break;
-			}
-			else {
-				cout << "Bad!" << endl;
-				int exit1;
-				exit1 = cin.get();
-				cin.ignore(1024, '\n');
-				break;
+				cout << "metasploit-framework" << endl;
+				cin >> setw(256) >> word;
+				if (word == a5) {
+					cout << "Good!" << endl;
+					cin.ignore(1024, '\n');
+					cin.get();
+					break;
+				}
+				else {
+					cout << "Bad!" << endl;
+					cin.ignore(1024, '\n');
+					cin.get();
+					break;
+				}
 			}
 		}
 	}
-}
 	return 0;
 }
