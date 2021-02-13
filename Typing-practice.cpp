@@ -73,12 +73,12 @@ int test1()
 				cin >> setw(256) >> word;
 					if (word == v1) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 					}
 				}
 		if(id == 2) {
@@ -87,12 +87,12 @@ int test1()
 				cin >> setw(256) >> word;
 					if (word == v2) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 					}
 				}
 				}
@@ -105,12 +105,12 @@ int test1()
 					cin >> setw(256) >> word;
 					if (word == v3) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 					}
 				}
 			}
@@ -120,12 +120,12 @@ int test1()
 					cin >> setw(256) >> word;
 					if (word == v4) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 					}
 				}
 			}
@@ -137,12 +137,12 @@ int test1()
 					cin >> setw(256) >> word;
 					if (word == v5) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 					}
 				}
 			}
@@ -152,13 +152,13 @@ int test1()
 					cin >> setw(256) >> word;
 					if (word == v6) {
 						cout << "Good!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						cin.get();
 						break;
 					}
 					else {
 						cout << "Bad!" << endl;
-						cin.ignore(1024, '\n');
+						cin.ignore(4024, '\n');
 						cin.get();
 					}
 				}
@@ -183,12 +183,12 @@ int test2()
 			cin >> setw(256) >> word;
 			if (word == a1) {
 				cout << "Good!" << endl;
-				cin.ignore(1024, '\n');
+				cin.ignore(4024, '\n');
 				break;
 			}
 			else {
 				cout << "Bad!" << endl;
-				cin.ignore(1024, '\n');
+				cin.ignore(4024, '\n');
 			}
 		}
 		else if (id == 2) {
@@ -196,12 +196,12 @@ int test2()
 			cin >> setw(256) >> word;
 			if (word == a2) {
 				cout << "Good!" << endl;
-				cin.ignore(1024, '\n');
+				cin.ignore(4024, '\n');
 				break;
 			}
 			else {
 				cout << "Bad!" << endl;
-				cin.ignore(1024, '\n');
+				cin.ignore(4024, '\n');
 			}
 		}
 	}
@@ -213,12 +213,12 @@ int test2()
 				cin >> setw(256) >> word;
 				if (word == a3) {
 					cout << "Good!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 					break;
 				}
 				else {
 					cout << "Bad!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 				}
 			}
 		}
@@ -228,12 +228,12 @@ int test2()
 				cin >> setw(256) >> word;
 				if (word == a4) {
 					cout << "Good!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 					break;
 				}
 				else {
 					cout << "Bad!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 				}
 			}
 		}
@@ -246,13 +246,13 @@ int test2()
 				cin >> setw(256) >> word;
 				if (word == a5) {
 					cout << "Good!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 					cin.get();
 					break;
 				}
 				else {
 					cout << "Bad!" << endl;
-					cin.ignore(1024, '\n');
+					cin.ignore(4024, '\n');
 					cin.get();
 					break;
 				}
