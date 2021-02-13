@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <random>
 #include <ctime>
@@ -14,10 +15,10 @@ char word[256];
 
 int main()
 {
-	char test;
+	char test[2];
 	cout << "Hello, typist!\n\n" << endl;
 	cout << "Press the y key to execute." << endl;
-	cin >> test;
+	cin >> setw(2) >> test;
 
 	if (test == 'y' || test == 'Y') {
 		typing();
@@ -69,7 +70,7 @@ int test1()
 		if (id == 1) {
 			for (q = 0;q < 3;q++) {
 			cout << "おはよう" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 				if (word == v1) {
 					cout << "Good!" << endl;
 					break;
@@ -81,7 +82,7 @@ int test1()
 		if(id == 2) {
 			for (q = 0;q < 3;q++) {
 				cout << "こんにちは" << endl;
-				cin >> word;
+				cin >> setw(256) >> word;
 					if (word == v2) {
 						cout << "Good!" << endl;
 						break;
@@ -97,7 +98,7 @@ int test1()
 			if (id1 == 1) {
 				for (q = 0;q < 3;q++) {
 				cout << "さようなら" << endl;
-				cin >> word;
+				cin >> setw(256) >> word;
 				if (word == v3) {
 					cout << "Good!" << endl;
 					break;
@@ -110,7 +111,7 @@ int test1()
 			if (id1 == 2) {
 				for (q = 0;q < 3;q++) {
 				cout << "こんばんは" << endl;
-				cin >> word;
+				cin >> setw(256) >> word;
 				if (word == v4) {
 					cout << "Good!" << endl;
 					break;
@@ -125,7 +126,7 @@ int test1()
 			if (id2 == 1) {
 				for (q = 0;q < 3;q++) {
 				cout << "おやすみ" << endl;
-				cin >> word;
+				cin >> setw(256) >> word;
 				if (word == v5) {
 					cout << "Good!" << endl;
 					break;
@@ -138,7 +139,7 @@ int test1()
 			if (id2 == 2) {
 				for (q = 0;q < 3;q++) {
 				cout << "ねむたい" << endl;
-				cin >> word;
+				cin >> setw(256) >> word;
 				if (word == v6) {
 					cout << "Good!" << endl;
 					int exit;
@@ -171,7 +172,7 @@ int test2()
 	for (i = 0;i < 1;++i) {
 		if (id == 1) {
 			cout << "hello" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 			if (word == a1) {
 				cout << "Good!" << endl;
 			}
@@ -181,7 +182,7 @@ int test2()
 		}
 		else if (id == 2) {
 			cout << "HELLO" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 			if (word == a2) {
 				cout << "Good!" << endl;
 			}
@@ -195,7 +196,7 @@ int test2()
 		for (q = 0;q < 3;q++) {
 		if (id1 == 1) {
 			cout << "linux" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 			if (word == a3) {
 				cout << "Good!" << endl;
 				break;
@@ -208,7 +209,7 @@ int test2()
 		if (id1 == 2) {
 			for (q = 0;q < 3;q++) {
 			cout << "ifconfig" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 			if (word == a4) {
 				cout << "Good!" << endl;
 				break;
@@ -224,7 +225,7 @@ int test2()
 		if (id2 == 1) {
 			for (q = 0;q < 3;q++) {
 			cout << "metasploit-framework" << endl;
-			cin >> word;
+			cin >> setw(256) >> word;
 			if (word == a5) {
 				cout << "Good!" << endl;
 				int exit;
