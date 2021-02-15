@@ -226,7 +226,6 @@ int test2()
 			else {
 				cout << "Bad!" << endl;
 				cin.ignore(1024, '\n');
-				break;
 			}
 		}
 	}
