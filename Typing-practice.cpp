@@ -117,7 +117,6 @@ int test1()
 			cin >> word;
 			if (word == v5) {
 				cout << "Good!" << endl;
-				cin.get();
 				cin.ignore(4024, '\n');
 				break;
 			}
@@ -133,17 +132,16 @@ int test1()
 			cin >> word;
 			if (word == v6) {
 				cout << "Good!" << endl;
-				cin.get();
 				cin.ignore(1024, '\n');
 				break;
 			}
 			else {
 				cout << "Bad!" << endl;
-				cin.get();
 				cin.ignore(1024, '\n');
 			}
 		}
 	}
+	cin.get();
 	return 0;
 }
 
@@ -166,6 +164,7 @@ int test2()
 			cin >> word;
 			if (word == a1) {
 				cout << "Good!" << endl;
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
@@ -179,6 +178,7 @@ int test2()
 			cin >> word;
 			if (word == a2) {
 				cout << "Good!" << endl;
+				break;
 			}
 			else {
 				cout << "Bad!" << endl;
@@ -220,19 +220,16 @@ int test2()
 			cin >> word;
 			if (word == a5) {
 				cout << "Good!" << endl;
-				int exit;
-				exit = cin.get();
 				cin.ignore(1024, '\n');
 				break;
 			}
 			else {
 				cout << "Bad!" << endl;
-				int exit1;
-				exit1 = cin.get();
 				cin.ignore(1024, '\n');
 				break;
 			}
 		}
 	}
+	cin.get();
 	return 0;
 }
