@@ -151,7 +151,6 @@ int test2()
 	int q;
 	int id = rand() % 2 + 1;
 	int id1 = rand() % 2 + 1;
-	int id2 = rand() % 2 + 1;
 	string a1 = "hello";
 	string a2 = "HELLO";
 	string a3 = "linux";
@@ -213,8 +212,7 @@ int test2()
 			}
 		}
 	}
-	switch (id2) {
-	case 1:
+	if (true) {
 		for (q = 0; q < 3; q++) {
 			cout << "metasploit-framework" << endl;
 			cin >> word;
