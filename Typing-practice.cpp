@@ -9,11 +9,10 @@ int typing();
 int test1();
 int test2();
 
-char word[256];
+string word;
 
 int main()
 {
-	char test;
 	cout << "Hello, typist!" << endl;
 	cout << "回数は今のところ設定できません。固定でn回\n\n" << endl;
 	cout << "Press the Enter key." << endl;
@@ -25,8 +24,6 @@ int main()
 int typing()
 {
 	srand(time(NULL));
-
-	int i;
 	int vi = rand() % 2 + 1;
 
 	switch (vi) {
@@ -43,27 +40,20 @@ int typing()
 
 int test1()
 {
-	int i;
 	int q;
 	int id = rand() % 2 + 1;
 	int id1 = rand() % 2 + 1;
 	int id2 = rand() % 2 + 1;
-	string v1 = "おはよう";
-	string v2 = "こんにちは";
-	string v3 = "さようなら";
-	string v4 = "こんばんは";
-	string v5 = "おやすみ";
-	string v6 = "ねむたい";
 	switch (id) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "おはよう" << endl;
-			cin >> word;
-			if (word == v1) {
+			getline(cin, word);
+			if (word == "おはよう") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
@@ -72,72 +62,69 @@ int test1()
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "こんにちは" << endl;
-			cin >> word;
-			if (word == v2) {
+			getline(cin, word);
+			if (word == "こんにちは") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
 	}
 	switch (id1) {
 	case 1:
-		for (q = 0;q < 3;q++) {
+		for (q = 0; q < 3; q++) {
 			cout << "さようなら" << endl;
-			cin >> word;
-			if (word == v3) {
+			getline(cin, word);
+			if (word == "さようなら") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
 	}
 	switch (id1) {
 	case 2:
-		for (q = 0;q < 3;q++) {
+		for (q = 0; q < 3; q++) {
 			cout << "こんばんは" << endl;
-			cin >> word;
-			if (word == v4) {
+			getline(cin, word);
+			if (word == "こんばんは") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
 	}
 	switch (id2) {
 	case 1:
-		for (q = 0;q < 3;q++) {
+		for (q = 0; q < 3; q++) {
 			cout << "おやすみ" << endl;
-			cin >> word;
-			if (word == v5) {
+			getline(cin, word);
+			if (word == "おやすみ") {
 				cout << "Good!" << endl;
-				cin.ignore(4024, '\n');
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
 	}
 	switch (id2) {
 	case 2:
-		for (q = 0;q < 3;q++) {
+		for (q = 0; q < 3; q++) {
 			cout << "ねむたい" << endl;
-			cin >> word;
-			if (word == v6) {
+			getline(cin, word);
+			if (word == "ねむたい") {
 				cout << "Good!" << endl;
-				cin.ignore(1024, '\n');
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
-				cin.ignore(1024, '\n');
 			}
 		}
 	}
@@ -147,25 +134,19 @@ int test1()
 
 int test2()
 {
-	int i;
 	int q;
 	int id = rand() % 2 + 1;
 	int id1 = rand() % 2 + 1;
-	string a1 = "hello";
-	string a2 = "HELLO";
-	string a3 = "linux";
-	string a4 = "ifconfig";
-	string a5 = "metasploit-framework";
 	switch (id) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "hello" << endl;
-			cin >> word;
-			if (word == a1) {
+			getline(cin, word);
+			if (word == "hello") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
@@ -174,12 +155,12 @@ int test2()
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "HELLO" << endl;
-			cin >> word;
-			if (word == a2) {
+			getline(cin, word);
+			if (word == "HELLO") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
@@ -188,12 +169,12 @@ int test2()
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "linux" << endl;
-			cin >> word;
-			if (word == a3) {
+			getline(cin, word);
+			if (word == "linux") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
@@ -202,12 +183,12 @@ int test2()
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "ifconfig" << endl;
-			cin >> word;
-			if (word == a4) {
+			getline(cin, word);
+			if (word == "ifconfig") {
 				cout << "Good!" << endl;
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
 			}
 		}
@@ -215,15 +196,13 @@ int test2()
 	if (true) {
 		for (q = 0; q < 3; q++) {
 			cout << "metasploit-framework" << endl;
-			cin >> word;
-			if (word == a5) {
+			getline(cin, word);
+			if (word == "metasploit-framework") {
 				cout << "Good!" << endl;
-				cin.ignore(1024, '\n');
 				break;
 			}
-			else {
+			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
-				cin.ignore(1024, '\n');
 			}
 		}
 	}
