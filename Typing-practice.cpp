@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <unistd.h>
 #include <ctime>
 #include <cstdlib>
 using namespace std;
@@ -17,6 +18,7 @@ int main()
 	cout << "回数は今のところ設定できません。固定でn回\n\n" << endl;
 	cout << "Press the Enter key." << endl;
 	cin.get();
+	system("cls");//linuxでは、system("clear");に変えて使用してね。
 	typing();
 	return 0;
 }
@@ -51,6 +53,8 @@ int test1()
 			getline(cin, word);
 			if (word == "おはよう") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -65,6 +69,8 @@ int test1()
 			getline(cin, word);
 			if (word == "こんにちは") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -79,6 +85,8 @@ int test1()
 			getline(cin, word);
 			if (word == "さようなら") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -93,6 +101,8 @@ int test1()
 			getline(cin, word);
 			if (word == "こんばんは") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -107,6 +117,8 @@ int test1()
 			getline(cin, word);
 			if (word == "おやすみ") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -144,6 +156,8 @@ int test2()
 			getline(cin, word);
 			if (word == "hello") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -158,6 +172,8 @@ int test2()
 			getline(cin, word);
 			if (word == "HELLO") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -172,6 +188,8 @@ int test2()
 			getline(cin, word);
 			if (word == "linux") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
@@ -186,6 +204,8 @@ int test2()
 			getline(cin, word);
 			if (word == "ifconfig") {
 				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
