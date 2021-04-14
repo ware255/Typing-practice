@@ -5,7 +5,7 @@ Typing-practiceをしたい場合は、文字コードをShift-JISにしてか�
 ```
 g++ Typing-practice.cpp -o Typing-practice -Wall
 ```
-を実行してください。それか、
+を実行してください。コンパイラがClangの場合は、
 ```
 clang++ Typing-practice.cpp -o Typing-practice -Wall
 ```
