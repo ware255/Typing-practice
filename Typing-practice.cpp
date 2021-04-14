@@ -5,48 +5,13 @@
 #include <cstdlib>
 using namespace std;
 
-int typing();
-
-int test1();
-int test2();
-
 string word;
 
-int main()
-{
-	cout << "Hello, typist!" << endl;
-	cout << "回数は今のところ設定できません。固定でn回\n\n" << endl;
-	cout << "Press the Enter key." << endl;
-	cin.get();
-	system("cls");//linuxでは、system("clear");に変えて使用してね。
-	typing();
-	return 0;
-}
-
-int typing()
-{
-	srand(time(NULL));
-	int vi = rand() % 2 + 1;
-
-	switch (vi) {
-	case 1:
-		test1();
-		break;
-	case 2:
-		test2();
-		break;
-	}
-
-	return 0;
-}
-
-int test1()
+void test1()
 {
 	int q;
-	int id = rand() % 2 + 1;
-	int id1 = rand() % 2 + 1;
-	int id2 = rand() % 2 + 1;
-	switch (id) {
+	srand(time(NULL));
+	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "おはよう" << endl;
@@ -59,10 +24,12 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
-	switch (id) {
+	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "こんにちは" << endl;
@@ -75,10 +42,12 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
-	switch (id1) {
+	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "さようなら" << endl;
@@ -91,10 +60,12 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
-	switch (id1) {
+	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "こんばんは" << endl;
@@ -107,10 +78,12 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
-	switch (id2) {
+	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "おやすみ" << endl;
@@ -123,10 +96,12 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
-	switch (id2) {
+	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "ねむたい" << endl;
@@ -137,19 +112,20 @@ int test1()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
 	}
 	cin.get();
-	return 0;
+	return;
 }
 
-int test2()
+void test2()
 {
 	int q;
-	int id = rand() % 2 + 1;
-	int id1 = rand() % 2 + 1;
-	switch (id) {
+	srand(time(NULL));
+	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "hello" << endl;
@@ -162,10 +138,46 @@ int test2()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
+	case 2:
+		for (q = 0; q < 3; q++) {
+			cout << "script" << endl;
+			getline(cin, word);
+			if (word == "script") {
+				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
+				break;
+			}
+			else if (word.empty() == 0) {
+				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
+			}
+		}
+	default:
+		break;
 	}
-	switch (id) {
+	switch (rand() % 2 + 1) {
+	case 1:
+		for (q = 0; q < 3; q++) {
+			cout << "Fuck" << endl;
+			getline(cin, word);
+			if (word == "Fuck") {
+				cout << "Good!" << endl;
+				sleep(1);
+				system("cls");
+				break;
+			}
+			else if (word.empty() == 0) {
+				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
+			}
+		}
 	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "HELLO" << endl;
@@ -178,10 +190,14 @@ int test2()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
+	default:
+		break;
 	}
-	switch (id1) {
+	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "linux" << endl;
@@ -194,11 +210,31 @@ int test2()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
-	}
-	switch (id1) {
 	case 2:
+		for (q = 0; q < 3; q++) {
+			cout << "LINUX" << endl;
+			getline(cin, word);
+			if (word == "linux") {
+				cout << "" << endl;
+				sleep(1);
+				system("cls");
+				break;
+			}
+			else if (word.empty() == 0) {
+				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
+			}
+		}
+	default:
+		break;
+	}
+	switch (rand() % 2 + 1) {
+	case 1:
 		for (q = 0; q < 3; q++) {
 			cout << "ifconfig" << endl;
 			getline(cin, word);
@@ -210,10 +246,11 @@ int test2()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
-	}
-	if (true) {
+	case 2:
 		for (q = 0; q < 3; q++) {
 			cout << "metasploit-framework" << endl;
 			getline(cin, word);
@@ -223,9 +260,41 @@ int test2()
 			}
 			else if (word.empty() == 0) {
 				cout << "Bad!" << endl;
+				sleep(1);
+				system("cls");
 			}
 		}
+	default:
+		break;
 	}
 	cin.get();
+	return;
+}
+
+int typing()
+{
+	srand(time(NULL));
+	switch (rand() % 2 + 1) {
+	case 1:
+		test1();
+		break;
+	case 2:
+		test2();
+		break;
+	default:
+		break;
+	}
+
+	return 0;
+}
+
+int main()
+{
+	cout << "Hello, typist!" << endl;
+	cout << "回数は今のところ設定できません。固定でn回\n\n" << endl;
+	cout << "Press the Enter key." << endl;
+	cin.get();
+	system("cls");//linuxでは、system("clear");に変えて使用してね。
+	typing();
 	return 0;
 }
