@@ -3,14 +3,14 @@
 #include <unistd.h>
 #include <ctime>
 #include <cstdlib>
-using namespace std;
+using std::cout, std::endl;
 
 string word;
 
 void test1()
 {
 	int q;
-	srand(time(NULL));
+	std::srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
@@ -273,7 +273,7 @@ void test2()
 
 int typing()
 {
-	srand(time(NULL));
+	std::srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		test1();
