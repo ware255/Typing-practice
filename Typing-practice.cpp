@@ -120,6 +120,7 @@ void test1()
 			}
 		}
 	}
+    std::cout << "\n終わりましたので、Enterを押して終了してください。" << std::endl;
 	std::cin.get();
 	return;
 }
@@ -270,6 +271,7 @@ void test2()
 	default:
 		break;
 	}
+    std::cout << "\n終わりましたので、Enterを押して終了してください。" << std::endl;
 	std::cin.get();
 	return;
 }
@@ -288,7 +290,7 @@ int typing()
 		break;
 	}
 
-	return 0;
+	return -1;
 }
 
 int main()
@@ -299,5 +301,5 @@ int main()
 	std::cin.get();
 	system("cls");//linuxでは、system("clear");に変えて使用してね。
 	typing();
-	return 0;
+	return 1;
 }
