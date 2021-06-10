@@ -276,7 +276,7 @@ void test2()
 	return;
 }
 
-int typing()
+void typing()
 {
 	std::srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
@@ -300,6 +300,7 @@ int main()
 	std::cout << "Press the Enter key." << std::endl;
 	std::cin.get();
 	system("cls");//linuxでは、system("clear");に変えて使用してね。
-	typing();
+	void(*Typing)() = &typing;
+	(*Typing)();
 	return 1;
 }
