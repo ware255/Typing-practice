@@ -310,7 +310,7 @@ int typing() {
 
 int main() {
 	cout << "Hello, typist!" << endl;
-	cout << "回数は今のところ設定できません。固定でn回\n\n" << endl;
+	cout << "回数は今のところ設定できません。\n\"Good!\"が表示されて1秒が待ってください。バグります。\n固定でn回\n\n" << endl;
 	cout << "Press the Enter key." << endl;
 	cin.get();
 	system("cls");//linuxでは、system("clear");に変えて使用してね。
