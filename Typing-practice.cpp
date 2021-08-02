@@ -4,49 +4,48 @@
 
 #include <iostream>
 #include <string>
-#include <unistd.h>
+//#include <chrono>
+//#include <thread>
 #include <ctime>
-#include <cstdlib>
-using namespace std;
+#include <Windows.h>//Linuxの場合は削除しておいてください。
 
-string word;
+std::string word;
 
 void test1()
 {
 	int q;
-	srand(time(NULL));
+	std::srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "おはよう" << endl;
-			getline(cin, word);
+			std::cout << "おはよう" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "おはよう") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
+				//std::this_thread::sleep_for(std::chrono::seconds(1));
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
-	}
-	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "こんにちは" << endl;
-			getline(cin, word);
+			std::cout << "こんにちは" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "こんにちは") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
@@ -54,35 +53,33 @@ void test1()
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "さようなら" << endl;
-			getline(cin, word);
+			std::cout << "さようなら" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "さようなら") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
-	}
-	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "こんばんは" << endl;
-			getline(cin, word);
-			if (word == "こんばんは") {
-				cout << "Good!" << endl;
-				sleep(1);
+			std::cout << "こんばんわ" << std::endl;
+			std::getline(std::cin, word);
+			if (word == "こんばんわ") {
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
@@ -90,75 +87,73 @@ void test1()
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "おやすみ" << endl;
-			getline(cin, word);
+			std::cout << "おやすみ" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "おやすみ") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
-	}
-	switch (rand() % 2 + 1) {
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "ねむたい" << endl;
-			getline(cin, word);
+			std::cout << "ねむたい" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "ねむたい") {
-				cout << "Good!" << endl;
+				std::cout << "Good!\n\n終わり！" << std::endl;
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	}
-	cin.get();
+	std::cin.get();
 	return;
 }
 
 void test2()
 {
 	int q;
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "hello" << endl;
-			getline(cin, word);
+			std::cout << "hello" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "hello") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "script" << endl;
-			getline(cin, word);
+			std::cout << "script" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "script") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
@@ -168,33 +163,33 @@ void test2()
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "Fuck" << endl;
-			getline(cin, word);
+			std::cout << "Fuck" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "Fuck") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "HELLO" << endl;
-			getline(cin, word);
+			std::cout << "HELLO" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "HELLO") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
@@ -204,33 +199,33 @@ void test2()
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "linux" << endl;
-			getline(cin, word);
+			std::cout << "linux" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "linux") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "LINUX" << endl;
-			getline(cin, word);
-			if (word == "linux") {
-				cout << "" << endl;
-				sleep(1);
+			std::cout << "LINUX" << std::endl;
+			std::getline(std::cin, word);
+			if (word == "LINUX") {
+				std::cout << "" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
@@ -240,45 +235,45 @@ void test2()
 	switch (rand() % 2 + 1) {
 	case 1:
 		for (q = 0; q < 3; q++) {
-			cout << "ifconfig" << endl;
-			getline(cin, word);
+			std::cout << "ifconfig" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "ifconfig") {
-				cout << "Good!" << endl;
-				sleep(1);
+				std::cout << "Good!" << std::endl;
+				Sleep(10);
 				system("cls");
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	case 2:
 		for (q = 0; q < 3; q++) {
-			cout << "metasploit-framework" << endl;
-			getline(cin, word);
+			std::cout << "metasploit-framework" << std::endl;
+			std::getline(std::cin, word);
 			if (word == "metasploit-framework") {
-				cout << "Good!" << endl;
+				std::cout << "Good!\n\n終わり！" << std::endl;
 				break;
 			}
 			else if (word.empty() == 0) {
-				cout << "Bad!" << endl;
-				sleep(1);
+				std::cout << "Bad!" << std::endl;
+				Sleep(10);
 				system("cls");
 			}
 		}
 	default:
 		break;
 	}
-	cin.get();
+	std::cin.get();
 	return;
 }
 
 /*
 void test3()
 {
-	srand(time(NULL));
+	srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		cout << "" << endl;
@@ -291,7 +286,7 @@ void test3()
 }
 */
 
-int typing() {
+void typing() {
 	void(*F_test1)() = &test1;
 	void(*F_test2)() = &test2;
 	std::srand((unsigned)time(nullptr));
@@ -305,16 +300,18 @@ int typing() {
 	default:
 		break;
 	}
-	return 1;
+	return;
 }
 
 int main() {
-	cout << "Hello, typist!" << endl;
-	cout << "回数は今のところ設定できません。\n\"Good!\"が表示されて1秒が待ってください。バグります。\n固定でn回\n\n" << endl;
-	cout << "Press the Enter key." << endl;
-	cin.get();
+	::SetConsoleTitle(TEXT("Typing-practice"));//Linuxの場合は削除対象です。
+	std::cout << "Hello, typist!" << std::endl;
+	std::cout << "The number of times cannot be set at the moment.\n" <<
+	"Wait a second after the \"Good!\" message appears. It's a bug.\n\n" << std::endl;
+	std::cout << "Press the Enter key." << std::endl;
+	std::cin.get();
 	system("cls");//linuxでは、system("clear");に変えて使用してね。
-	int(*F_typing)() = &typing;
+	void(*F_typing)() = &typing;
 	(*F_typing)();
-	return -1;//typing()がreturn 1なので0になる。
+	return 0;
 }
