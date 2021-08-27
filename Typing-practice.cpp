@@ -90,7 +90,7 @@ void test1()
 			std::cout << "おやすみ" << std::endl;
 			std::getline(std::cin, word);
 			if (word == "おやすみ") {
-				std::cout << "Good!" << std::endl;
+				std::cout << "Good!\n\n終わり！" << std::endl;
 				Sleep(10);
 				system("cls");
 				break;
@@ -238,7 +238,7 @@ void test2()
 			std::cout << "ifconfig" << std::endl;
 			std::getline(std::cin, word);
 			if (word == "ifconfig") {
-				std::cout << "Good!" << std::endl;
+				std::cout << "Good!\n\n終わり！" << std::endl;
 				Sleep(10);
 				system("cls");
 				break;
@@ -289,7 +289,7 @@ void test3()
 void typing() {
 	void(*F_test1)() = &test1;
 	void(*F_test2)() = &test2;
-	std::srand((unsigned)time(nullptr));
+	std::srand((unsigned)time(NULL));
 	switch (rand() % 2 + 1) {
 	case 1:
 		(*F_test1)();
@@ -298,6 +298,7 @@ void typing() {
 		(*F_test2)();
 		break;
 	default:
+		std::cout << "Oops!" << std::endl;
 		break;
 	}
 	return;
@@ -305,13 +306,16 @@ void typing() {
 
 int main() {
 	::SetConsoleTitle(TEXT("Typing-practice"));//Linuxの場合は削除対象です。
+
 	std::cout << "Hello, typist!" << std::endl;
 	std::cout << "The number of times cannot be set at the moment.\n" <<
-	"Wait a second after the \"Good!\" message appears. It's a bug.\n\n" << std::endl;
+		"Wait a second after the \"Good!\" message appears. It's a bug.\n\n" << std::endl;
 	std::cout << "Press the Enter key." << std::endl;
 	std::cin.get();
 	system("cls");//linuxでは、system("clear");に変えて使用してね。
+
 	void(*F_typing)() = &typing;
 	(*F_typing)();
+
 	return 0;
 }
