@@ -11,3 +11,7 @@ g++ -O3 Typing-practice.cpp -o Typing-practice -Wall
 clang++ -O3 Typing-practice.cpp -o Typing-practice -Wall
 ```
 を実行してください。
+
+# 動作環境
+    Windows10
+    etc.
